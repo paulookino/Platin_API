@@ -22,13 +22,13 @@ namespace Platin.Infra.IOC.ContainerIOC
             _container = new Container();
 
             _container.Register(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
-            //_container.Register<IClienteAppService, ClienteAppServiceBase>();
-            
+            _container.Register<IProductAppServiceBase, ProductAppServiceBase>();
+
             _container.Register(typeof(IServiceBase<>), typeof(ServiceBase<>));
-            //_container.Register<IClienteService, ClienteService>();
+            _container.Register<IProductService, ProductService>();
             
             _container.Register(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
-            //_container.Register<IClienteRepository, ClienteRepository>();
+            _container.Register<IProductRepository, ProductRepository>();
             
             return _container;
         }

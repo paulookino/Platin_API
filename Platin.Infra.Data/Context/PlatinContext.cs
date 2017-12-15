@@ -1,4 +1,5 @@
 ﻿//using Platin.Domain.Entities;
+using Platin.Domain.Entities;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -13,7 +14,7 @@ namespace Platin.Infra.Data.Context
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        //public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Product> Product { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -21,7 +22,7 @@ namespace Platin.Infra.Data.Context
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-            //modelBuilder.Configurations.Add(new EntityConfig.ClienteConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.ProductConfiguration());
 
             //modelBuilder.Entity<CalculoSimulacao>().HasKey<decimal>(k => k.Valor);
             //modelBuilder.Entity<Cliente>().Ignore(d => d.EhCliente);
