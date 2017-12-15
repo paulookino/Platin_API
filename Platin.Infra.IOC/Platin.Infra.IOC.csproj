@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContainerIOC\SimpleInjectorContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platin.Application\Platin.Application.csproj">
+      <Project>{8B31A2F1-AD1E-4182-80E6-609A6FD55D40}</Project>
+      <Name>Platin.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platin.Domain\Platin.Domain.csproj">
+      <Project>{9D908C7F-7563-4DFD-B09C-6F13F520A2B3}</Project>
+      <Name>Platin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platin.Infra.Data\Platin.Infra.Data.csproj">
+      <Project>{D0548A2B-3515-426A-9D5F-5A11CD813EC3}</Project>
+      <Name>Platin.Infra.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
