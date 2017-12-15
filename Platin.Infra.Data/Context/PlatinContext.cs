@@ -1,4 +1,4 @@
-﻿using Platin.Domain.Entities;
+﻿//using Platin.Domain.Entities;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;

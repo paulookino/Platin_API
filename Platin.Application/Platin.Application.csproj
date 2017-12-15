@@ -44,5 +44,11 @@
     <Compile Include="Interfaces\IAppServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platin.Domain\Platin.Domain.csproj">
+      <Project>{9D908C7F-7563-4DFD-B09C-6F13F520A2B3}</Project>
+      <Name>Platin.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
