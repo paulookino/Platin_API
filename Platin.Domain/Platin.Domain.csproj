@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,12 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\PrdCab.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Interfaces\Repositories\IPostgreSQLRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\IPrdCabRepository.cs" />
     <Compile Include="Interfaces\Repositories\IProductRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Services\IPostgreSQLServiceBase.cs" />
+    <Compile Include="Interfaces\Services\IPrdCabService.cs" />
     <Compile Include="Interfaces\Services\IProductService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PostgreSQLServiceBase.cs" />
+    <Compile Include="Services\PrdCabService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>

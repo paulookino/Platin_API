@@ -43,7 +43,11 @@
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Interfaces\IPostgreSQLAppServiceBase.cs" />
+    <Compile Include="Interfaces\IPrdCabAppServiceBase.cs" />
     <Compile Include="Interfaces\IProductAppServiceBase.cs" />
+    <Compile Include="PostgreSQLAppServiceBase.cs" />
+    <Compile Include="PrdCabAppServiceBase.cs" />
     <Compile Include="ProductAppServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
