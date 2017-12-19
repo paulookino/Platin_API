@@ -4,193 +4,193 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Platin.Domain.Entities
 {
-    [Table("prd_cab", Schema = "estoque")]
+    //[Table("prd_cab", Schema = "estoque")]
     public class PrdCab
     {
-        [Key]
-        [Column("ide")]
+        //[Key]
+        //[Column("ide")]
         public long Ide { get; set; }
 
-        [Column("cod")]
+        //[Column("cod")]
         public int? Cod { get; set; }
 
-        [Column("des")]
+        //[Column("des")]
         public string Des { get; set; }
 
-        [Column("tip")]
+        //[Column("tip")]
         public string Tip { get; set; }
 
-        [Column("cls")]
-        public int? Cls { get; set; }
+       // [Column("cls")]
+        public short? Cls { get; set; }
 
-        [Column("sec")]
-        public int? Sec { get; set; }
+        //[Column("sec")]
+        public short? Sec { get; set; }
 
-        [Column("ipi")]
-        public int? Ipi { get; set; }
+        //[Column("ipi")]
+        public short? Ipi { get; set; }
 
-        [Column("un")]
+        //[Column("un")]
         public string Un { get; set; }
 
-        [Column("qte")]
-        public int? Qte { get; set; }
+        //[Column("qte")]
+        public short? Qte { get; set; }
 
-        [Column("cop")]
+       // [Column("cop")]
         public int? Cop { get; set; }
 
 
-        [Column("pfa")]
+        //[Column("pfa")]
         public double? Pfa { get; set; }
 
 
-        [Column("pmx")]
+        //[Column("pmx")]
         public double? Pmx { get; set; }
 
 
-        [Column("pac")]
+        //[Column("pac")]
         public double? Pac { get; set; }
 
 
-        [Column("etq")]
+       // [Column("etq")]
         public string Etq { get; set; }
 
-        [Column("icm")]
-        public int? Icm { get; set; }
+        //[Column("icm")]
+        public short? Icm { get; set; }
 
-        [Column("tpl")]
+        //[Column("tpl")]
         public string Tpl { get; set; }
 
-        [Column("rem")]
+        //[Column("rem")]
         public string Rem { get; set; }
 
-        [Column("cum")]
+        //[Column("cum")]
         public double? Cum { get; set; }
 
-        [Column("ucu")]
+        //[Column("ucu")]
         public double? Ucu { get; set; }
 
 
-        [Column("pro")]
+        //[Column("pro")]
         public double? Pro { get; set; }
 
-        [Column("loc")]
+        //[Column("loc")]
         public string Loc { get; set; }
 
-        [Column("fti")]
+        //[Column("fti")]
         public string Fti { get; set; }
 
-        [Column("dft")]
+        //[Column("dft")]
         public string Dft { get; set; }
 
-        [Column("cvf")]
+       // [Column("cvf")]
         public string Cvf { get; set; }
 
-        [Column("ctr")]
-        public int? Ctr { get; set; }
+        //[Column("ctr")]
+        public short? Ctr { get; set; }
 
-        [Column("dca")]
+        //[Column("dca")]
         public string Dca { get; set; }
 
-        [Column("due")]
+        //[Column("due")]
         public string Due { get; set; }
 
-        [Column("dus")]
+        //[Column("dus")]
         public string Dus { get; set; }
 
-        [Column("dur")]
+        //[Column("dur")]
         public string Dur { get; set; }
 
-        [Column("eat")]
+        //[Column("eat")]
         public int? Eat { get; set; }
 
-        [Column("fab")]
+        //[Column("fab")]
         public int? Fab { get; set; }
 
-        [Column("dep")]
+        //[Column("dep")]
         public int? Dep { get; set; }
 
-        [Column("ref")]
+        //[Column("ref")]
         public int? Ref { get; set; }
 
-        [Column("gsu")]
+        //[Column("gsu")]
         public int? Gsu { get; set; }
 
-        [Column("tbo")]
+        //[Column("tbo")]
         public string Tbo { get; set; }
 
-        [Column("bon")]
+        //[Column("bon")]
         public double? Bon { get; set; }
 
-        [Column("lde")]
-        public int? Lde { get; set; }
+        //[Column("lde")]
+        public short? Lde { get; set; }
 
-        [Column("str")]
+        //[Column("str")]
         public string Str { get; set; }
 
-        [Column("tba")]
+        //[Column("tba")]
         public string Tba { get; set; }
 
-        [Column("ivi")]
+        //[Column("ivi")]
         public double? Ivi { get; set; }
 
-        [Column("ive")]
+       // [Column("ive")]
         public double? Ive { get; set; }
 
-        [Column("tiv")]
+        //[Column("tiv")]
         public string Tiv { get; set; }
 
-        [Column("ncm")]
+        //[Column("ncm")]
         public string Ncm { get; set; }
 
-        [Column("atv")]
-        public bool Atv { get; set; }
+        //[Column("atv")]
+        public bool? Atv { get; set; }
 
-        [Column("pic")]
+        //[Column("pic")]
         public double? Pic { get; set; }
 
-        [Column("tst")]
-        public int? Tst { get; set; }
+        //[Column("tst")]
+        public short? Tst { get; set; }
 
-        [Column("ori")]
-        public int? Ori { get; set; }
+        //[Column("ori")]
+        public short? Ori { get; set; }
 
-        [Column("pis")]
+        //[Column("pis")]
         public decimal? Pis { get; set; }
 
-        [Column("cos")]
+        //[Column("cos")]
         public decimal? Cos { get; set; }
 
-        [Column("tme")]
+        //[Column("tme")]
         public string Tme { get; set; }
 
-        [Column("upd")]
-        public bool Upd { get; set; }
+        //[Column("upd")]
+        public bool? Upd { get; set; }
 
-        [Column("s2s")]
-        public bool S2s { get; set; }
+        //[Column("s2s")]
+        public bool? S2s { get; set; }
 
-        [Column("fab_div")]
+        //[Column("fab_div")]
         public int? FabDiv { get; set; }
 
-        [Column("fat")]
+       // [Column("fat")]
         public double? Fat { get; set; }
 
-        [Column("ebi")]
+       // [Column("ebi")]
         public double? Ebi { get; set; }
 
-        [Column("des_red")]
+       // [Column("des_red")]
         public string DesRed { get; set; }
 
-        [Column("crv")]
+        //[Column("crv")]
         public string Crv { get; set; }
 
-        [Column("dta")]
+       // [Column("dta")]
         public DateTime? Dta { get; set; }
 
-        [Column("dis")]
-        public bool Dis { get; set; }
+        //[Column("dis")]
+        public bool? Dis { get; set; }
 
-        [Column("acr")]
-        public bool Acr { get; set; }
+        //[Column("acr")]
+        public bool? Acr { get; set; }
     }
 }

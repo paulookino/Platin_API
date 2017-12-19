@@ -18,16 +18,16 @@ namespace Platin.Infra.Data.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
 
-            modelBuilder.Entity<PrdCab>().ToTable("prd_cab", "estoque");
-        
-        modelBuilder.Conventions.Remove<StoreGeneratedIdentityKeyConvention>();
+            //modelBuilder.Entity<PrdCab>().ToTable("prd_cab", "estoque");
 
-            //modelBuilder.Configurations.Add(new EntityConfig.PrdCabConfiguration());
+            //modelBuilder.Conventions.Remove<StoreGeneratedIdentityKeyConvention>();
+
+            modelBuilder.Configurations.Add(new EntityConfig.PrdCabConfiguration());
 
             //modelBuilder.Entity<CalculoSimulacao>().HasKey<decimal>(k => k.Valor);
             //modelBuilder.Entity<Cliente>().Ignore(d => d.EhCliente);

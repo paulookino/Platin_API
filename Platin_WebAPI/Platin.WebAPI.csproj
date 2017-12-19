@@ -155,6 +155,10 @@
       <Project>{9D908C7F-7563-4DFD-B09C-6F13F520A2B3}</Project>
       <Name>Platin.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Platin.Infra.CrossCutting.Helpers\Platin.Infra.CrossCutting.Helpers.csproj">
+      <Project>{5CCD62F6-19CD-47F1-83BA-6F1E5A80864E}</Project>
+      <Name>Platin.Infra.CrossCutting.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Platin.Infra.IOC\Platin.Infra.IOC.csproj">
       <Project>{D868A3A4-E680-4454-8477-7335C8651915}</Project>
       <Name>Platin.Infra.IOC</Name>

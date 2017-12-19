@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Platin.Application.Interfaces;
 using Platin.Domain.Entities;
+using Platin.Infra.CrossCutting.Helpers;
 using Platin_WebAPI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 using System.Web.Http.Results;
 
@@ -24,7 +26,7 @@ namespace Platin_WebAPI.Controllers
         [HttpPost]
         public HttpResponseMessage Inserir(ProductViewModel productModel)
         {
-
+            var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
             try
             {
@@ -36,7 +38,8 @@ namespace Platin_WebAPI.Controllers
                     retorno = "Produto "+ productDomain.Name + "inserido com sucesso.";
                 }
 
-
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
             }
             catch (Exception ex)
             {
@@ -44,13 +47,13 @@ namespace Platin_WebAPI.Controllers
                 retorno = "Houve um erro interno:" + ex;
             }
 
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno);
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
         [HttpPut]
         public HttpResponseMessage Editar(ProductViewModel productModel)
         {
-
+            var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
             try
             {
@@ -61,7 +64,8 @@ namespace Platin_WebAPI.Controllers
                     _productAppServiceBase.Update(productDomain);
                     retorno = "Produto " + productDomain.Name + "editado com sucesso.";
                 }
-
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
             }
             catch (Exception ex)
             {
@@ -69,13 +73,13 @@ namespace Platin_WebAPI.Controllers
                 retorno = "Houve um erro interno:" + ex;
             }
 
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno);
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
         [HttpPost]
         public HttpResponseMessage Excluir(ProductViewModel productModel)
         {
-
+            var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
             try
             {
@@ -86,6 +90,8 @@ namespace Platin_WebAPI.Controllers
                     _productAppServiceBase.Remove(productDomain);
                     retorno = "Produto " + productDomain.Name + "excluído com sucesso.";
                 }
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
 
             }
             catch (Exception ex)
@@ -94,12 +100,13 @@ namespace Platin_WebAPI.Controllers
                 retorno = "Houve um erro interno:" + ex;
             }
 
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno);
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
         [HttpGet]
         public HttpResponseMessage Listar()
         {
+            var formatter = new JsonMediaTypeFormatter();
             List<Product> retorno = null;
 
             string erro = null;
@@ -109,7 +116,8 @@ namespace Platin_WebAPI.Controllers
                 {
                     retorno = _productAppServiceBase.GetAll().ToList();
                 }
-
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
             }
             catch (Exception ex)
             {
@@ -117,14 +125,14 @@ namespace Platin_WebAPI.Controllers
                 erro = "Houve um erro interno:" + ex;
             }
 
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new{ retorno, erro });
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new{ retorno, erro }, formatter);
         }
 
         [HttpGet]
         public HttpResponseMessage BuscarPorId(int id)
         {
             Product retorno = null;
-
+            var formatter = new JsonMediaTypeFormatter();
             string mensagem = null;
             try
             {
@@ -137,7 +145,8 @@ namespace Platin_WebAPI.Controllers
                         mensagem = "Produto por Id não encontrado.";
                     }
                 }
-
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
             }
             catch (Exception ex)
             {
@@ -145,14 +154,14 @@ namespace Platin_WebAPI.Controllers
                 mensagem = "Houve um erro interno:" + ex;
             }
 
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new { retorno, mensagem });
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new { retorno, mensagem }, formatter);
         }
 
         [HttpGet]
         public HttpResponseMessage BuscarPorNome(string name)
         {
             List<Product> retorno = null;
-
+            var formatter = new JsonMediaTypeFormatter();
             string mensagem = null;
             try
             {
@@ -165,7 +174,8 @@ namespace Platin_WebAPI.Controllers
                         mensagem = "Produto por nome não encontrado.";
                     }
                 }
-
+                var jsonSerialize = new JsonSerialize();
+                jsonSerialize.SerializarJson(formatter);
             }
             catch (Exception ex)
             {
@@ -173,8 +183,7 @@ namespace Platin_WebAPI.Controllers
                 mensagem = "Houve um erro interno:" + ex;
             }
 
-
-            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new { retorno, mensagem });
+            return Request.CreateResponse(System.Net.HttpStatusCode.OK, new { retorno, mensagem }, formatter);
         }
     }
 }
