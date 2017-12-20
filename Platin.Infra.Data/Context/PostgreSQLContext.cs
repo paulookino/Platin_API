@@ -15,6 +15,15 @@ namespace Platin.Infra.Data.Context
         }
 
         public DbSet<PrdCab> PrdCab { get; set; }
+        public DbSet<VFunUadCab> VFunUadCab { get; set; }
+        public DbSet<UsuSis> UsuSis { get; set; }
+        public DbSet<LotCxa> LotCxa { get; set; }
+        public DbSet<ClsCab> ClsCab { get; set; }
+        public DbSet<PrdBar> PrdBar { get; set; }
+        public DbSet<CpmIte> CpmIte { get; set; }
+        public DbSet<CpmCab> CpmCab { get; set; }
+        public DbSet<FunCab> FunCab { get; set; }
+        public DbSet<CpmFec> CpmFec { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,6 +37,15 @@ namespace Platin.Infra.Data.Context
             //modelBuilder.Conventions.Remove<StoreGeneratedIdentityKeyConvention>();
 
             modelBuilder.Configurations.Add(new EntityConfig.PrdCabConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.VFunUadCabConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.UsuSisConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.LotCxaConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.ClsCabConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.PrdBarConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CpmIteConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CpmCabConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.FunCabConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CpmFecConfiguration());
 
             //modelBuilder.Entity<CalculoSimulacao>().HasKey<decimal>(k => k.Valor);
             //modelBuilder.Entity<Cliente>().Ignore(d => d.EhCliente);

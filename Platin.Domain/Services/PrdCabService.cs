@@ -1,4 +1,5 @@
-﻿using Platin.Domain.Entities;
+﻿using System.Collections.Generic;
+using Platin.Domain.Entities;
 using Platin.Domain.Interfaces.Repositories;
 using Platin.Domain.Interfaces.Services;
 
@@ -13,6 +14,11 @@ namespace Platin.Domain.Services
             :base(prdCabRepository)
         {
             _prdCabRepository = prdCabRepository;
+        }
+
+        public List<PrdCabPrdBarCpmIte> ConsultaPrdCabPrdBarCpmIte()
+        {
+            return _prdCabRepository.ConsultaPrdCabPrdBarCpmIte();
         }
     }
 
