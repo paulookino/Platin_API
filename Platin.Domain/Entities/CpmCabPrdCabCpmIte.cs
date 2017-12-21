@@ -15,7 +15,7 @@ namespace Platin.Domain.Entities
 
         public DateTime CupData { get; set; }
 
-        public TimeSpan CupHora { get; set; }
+        public string CupHora { get; set; }
 
         public double IteValor { get; set; }
 

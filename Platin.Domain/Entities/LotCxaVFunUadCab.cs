@@ -12,7 +12,7 @@ namespace Platin.Domain.Entities
 
         public DateTime CaiDataInicial { get; set; }
 
-        public TimeSpan CaiHoraInicial { get; set; }
+        public string CaiHoraInicial { get; set; }
 
         public string CaiStatus { get; set; }
 

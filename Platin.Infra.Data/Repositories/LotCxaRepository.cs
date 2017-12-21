@@ -21,7 +21,7 @@ namespace Platin.Infra.Data.Repositories
                                 CaiHoraInicial = lotCxa.Hor,
                                 CaiStatus = lotCxa.Stt,
                                 CaiNumero = lotCxa.Maq
-                          }).Take(30).ToList();
+                          }).Take(100).ToList();
 
             return result;
         }

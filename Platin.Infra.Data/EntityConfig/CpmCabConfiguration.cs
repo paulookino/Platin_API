@@ -16,7 +16,7 @@ namespace Platin.Infra.Data.EntityConfig
             Property(c => c.Lot).HasColumnName("lot").HasColumnType("int8");
             Property(c => c.Cpm).HasColumnName("cpm").HasColumnType("int8");
             Property(c => c.Dat).HasColumnName("dat").HasColumnType("date");
-            Property(c => c.Hor).HasColumnName("hor").HasColumnType("time");
+            Property(c => c.Hor).HasColumnName("hor").HasColumnType("varchar");
             Property(c => c.Ven).HasColumnName("ven").HasColumnType("bool");
             Property(c => c.Cod).HasColumnName("cod").HasColumnType("int8");
             Property(c => c.Grp).HasColumnName("grp").HasColumnType("varchar");

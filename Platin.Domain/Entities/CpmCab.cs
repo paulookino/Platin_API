@@ -12,7 +12,7 @@ namespace Platin.Domain.Entities
 
         public DateTime Dat { get; set; }
 
-        public TimeSpan Hor { get; set; }
+        public string Hor { get; set; }
 
         public bool Ven { get; set; }
 

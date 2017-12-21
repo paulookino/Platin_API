@@ -8,7 +8,7 @@ namespace Platin.Domain.Entities
 
         public DateTime VenData { get; set; }
 
-        public TimeSpan VenHora { get; set; }
+        public string VenHora { get; set; }
 
         public double VenTotal { get; set; }
 

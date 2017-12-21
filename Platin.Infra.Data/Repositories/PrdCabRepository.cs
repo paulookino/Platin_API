@@ -19,7 +19,7 @@ namespace Platin.Infra.Data.Repositories
                               ProDescricao = prdCab.Des,
                               ProValor = cpmIte.Vlr,
                               ProCodigo = prdBar.Bar
-                          }).Take(30).ToList();
+                          }).Take(100).ToList();
 
             return result;
         }

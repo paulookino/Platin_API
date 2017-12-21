@@ -21,7 +21,7 @@ namespace Platin.Infra.Data.Repositories
                              VenTotal = cpmFec.Vlt,
                              CaiId = lotCxa.Ide,
                              FunId = funCab.Ide
-                          }).Take(30).ToList();
+                          }).Take(100).ToList();
 
             return result;
         }
@@ -34,15 +34,16 @@ namespace Platin.Infra.Data.Repositories
                           from cpmIte in db.CpmIte
                           select new CpmCabPrdCabCpmIte
                           {
-                             CupId = cpmCab.Ide,
-                             CupCodigo = cpmCab.Cpm,
-                             CupProduto = prdCab.Ide,
-                             CupQuantidade = cpmIte.Qtd,
-                             CupData = cpmCab.Dat,
-                             CupHora = cpmCab.Hor,
-                             IteValor = cpmIte.Vlr,
-                             CupNumero = cpmIte.Cod
-                          }).Take(30).ToList();
+                              CupId = cpmCab.Ide,
+                              CupCodigo = cpmCab.Cpm,
+                              CupProduto = prdCab.Ide,
+                              CupQuantidade = cpmIte.Qtd,
+                              CupData = cpmCab.Dat,
+                              CupHora = cpmCab.Hor,
+                              IteValor = cpmIte.Vlr,
+                              CupNumero = cpmIte.Cod
+                          }).
+                            Take(100).ToList();
 
             return result;
         }

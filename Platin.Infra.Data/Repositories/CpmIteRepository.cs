@@ -21,7 +21,7 @@ namespace Platin.Infra.Data.Repositories
                              IteValor = cpmIte.Vlr,
                              IteHora = cpmCab.Hor,
                              IteData = cpmCab.Dat
-                          }).Take(30).ToList();
+                          }).Take(100).ToList();
 
             return result;
         }

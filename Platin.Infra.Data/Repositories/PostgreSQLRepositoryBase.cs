@@ -22,7 +22,7 @@ namespace Platin.Infra.Data.Repositories
 
         public IEnumerable<TEntity> GetAll()
         {
-            return db.Set<TEntity>().Take(30).ToList();
+            return db.Set<TEntity>().ToList();
         }
 
         public IEnumerable<TEntity> GetByFilter(System.Linq.Expressions.Expression<Func<TEntity, bool>> consulta)

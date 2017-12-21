@@ -18,7 +18,7 @@ namespace Platin.Infra.Data.EntityConfig
             Property(l => l.Ger).HasColumnName("ger").HasColumnType("varchar");
             Property(l => l.Maq).HasColumnName("maq").HasColumnType("varchar").IsRequired();
             Property(l => l.Dat).HasColumnName("dat").HasColumnType("date").IsRequired();
-            Property(l => l.Hor).HasColumnName("hor").HasColumnType("time");
+            Property(l => l.Hor).HasColumnName("hor").HasColumnType("varchar");
             Property(l => l.Vlc).HasColumnName("vlc").HasColumnType("float8");
             Property(l => l.Mov).HasColumnName("mov").HasColumnType("float8");
             Property(l => l.Vap).HasColumnName("vap").HasColumnType("varchar");
