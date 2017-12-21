@@ -23,8 +23,8 @@ namespace Platin_WebAPI.Controllers
             _productAppServiceBase = productAppServiceBase;
         }
 
-        [HttpPost]
-        public HttpResponseMessage Inserir(ProductViewModel productModel)
+        [HttpPost()]
+        public HttpResponseMessage Inserir([FromBody]ProductViewModel productModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -50,8 +50,8 @@ namespace Platin_WebAPI.Controllers
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
-        [HttpPut]
-        public HttpResponseMessage Editar(ProductViewModel productModel)
+        [HttpPut()]
+        public HttpResponseMessage Editar([FromBody]ProductViewModel productModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -76,8 +76,8 @@ namespace Platin_WebAPI.Controllers
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
-        [HttpPost]
-        public HttpResponseMessage Excluir(ProductViewModel productModel)
+        [HttpPost()]
+        public HttpResponseMessage Excluir([FromBody]ProductViewModel productModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;

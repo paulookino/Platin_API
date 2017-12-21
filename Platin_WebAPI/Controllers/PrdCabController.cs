@@ -25,8 +25,8 @@ namespace Platin_WebAPI.Controllers
             _prdCabAppServiceBase = prdCabAppServiceBase;
         }
 
-        [HttpPost]
-        public HttpResponseMessage Inserir(PrdCabViewModel prdCabViewModel)
+        [HttpPost()]
+        public HttpResponseMessage Inserir([FromBody]PrdCabViewModel prdCabViewModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -53,8 +53,8 @@ namespace Platin_WebAPI.Controllers
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
-        [HttpPut]
-        public HttpResponseMessage Editar(PrdCabViewModel prdCabViewModel)
+        [HttpPut()]
+        public HttpResponseMessage Editar([FromBody]PrdCabViewModel prdCabViewModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -80,8 +80,8 @@ namespace Platin_WebAPI.Controllers
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
-        [HttpPost]
-        public HttpResponseMessage Excluir(PrdCabViewModel prdCabViewModel)
+        [HttpPost()]
+        public HttpResponseMessage Excluir([FromBody]PrdCabViewModel prdCabViewModel)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
