@@ -185,5 +185,12 @@ namespace Platin_WebAPI.Controllers
 
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, new { retorno, mensagem }, formatter);
         }
+
+
+        [HttpGet]
+        public IEnumerable<Product> RetornaTodosProdutos()
+        {
+            return _productAppServiceBase.GetAll();
+        }
     }
 }
