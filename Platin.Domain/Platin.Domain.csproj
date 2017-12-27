@@ -55,6 +55,7 @@
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\FunCab.cs" />
     <Compile Include="Entities\Funcionario.cs" />
+    <Compile Include="Entities\Inventario.cs" />
     <Compile Include="Entities\ItemVenda.cs" />
     <Compile Include="Entities\LotCxa.cs" />
     <Compile Include="Entities\LotCxaVFunUadCab.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Interfaces\Repositories\ICupomRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFunCabRepository.cs" />
     <Compile Include="Interfaces\Repositories\IFuncionarioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IInventarioRepository.cs" />
     <Compile Include="Interfaces\Repositories\IItemVendaRepository.cs" />
     <Compile Include="Interfaces\Repositories\ILotCxaRepository.cs" />
     <Compile Include="Interfaces\Repositories\IPostgreSQLRepositoryBase.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Interfaces\Services\ICupomService.cs" />
     <Compile Include="Interfaces\Services\IFunCabService.cs" />
     <Compile Include="Interfaces\Services\IFuncionarioService.cs" />
+    <Compile Include="Interfaces\Services\IInventarioService.cs" />
     <Compile Include="Interfaces\Services\IItemVendaService.cs" />
     <Compile Include="Interfaces\Services\ILotCxaService.cs" />
     <Compile Include="Interfaces\Services\IPostgreSQLServiceBase.cs" />
@@ -117,6 +120,7 @@
     <Compile Include="Services\CupomService.cs" />
     <Compile Include="Services\FunCabService.cs" />
     <Compile Include="Services\FuncionarioService.cs" />
+    <Compile Include="Services\InventarioService.cs" />
     <Compile Include="Services\ItemVendaService.cs" />
     <Compile Include="Services\LotCxaService.cs" />
     <Compile Include="Services\PostgreSQLServiceBase.cs" />

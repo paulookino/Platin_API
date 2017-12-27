@@ -32,6 +32,7 @@ namespace Platin.Infra.IOC.ContainerIOC
             _container.Register<IVendaAppServiceBase, VendaAppServiceBase>();
             _container.Register<IItemVendaAppServiceBase, ItemVendaAppServiceBase>();
             _container.Register<ICupomAppServiceBase, CupomAppServiceBase>();
+            _container.Register<IInventarioAppServiceBase, InventarioAppServiceBase>();
 
             _container.Register(typeof(IServiceBase<>), typeof(ServiceBase<>));
             _container.Register<IProductService, ProductService>();
@@ -41,6 +42,7 @@ namespace Platin.Infra.IOC.ContainerIOC
             _container.Register<IProdutoService, ProdutoService>();
             _container.Register<IVendaService, VendaService>();
             _container.Register<ICupomService, CupomService>();
+            _container.Register<IInventarioService, InventarioService>();
 
             _container.Register(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             _container.Register<IProductRepository, ProductRepository>();
@@ -51,6 +53,7 @@ namespace Platin.Infra.IOC.ContainerIOC
             _container.Register<IVendaRepository, VendaRepository>();
             _container.Register<IItemVendaRepository, ItemVendaRepository>();
             _container.Register<ICupomRepository, CupomRepository>();
+            _container.Register<IInventarioRepository, InventarioRepository>();
 
             //PostgreSQL
             _container.Register(typeof(IPostgreSQLAppServiceBase<>), typeof(PostgreSQLAppServiceBase<>));

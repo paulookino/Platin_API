@@ -69,6 +69,7 @@
     <Compile Include="EntityConfig\CupomConfiguration.cs" />
     <Compile Include="EntityConfig\FunCabConfiguration.cs" />
     <Compile Include="EntityConfig\FuncionarioConfiguration.cs" />
+    <Compile Include="EntityConfig\InventarioConfiguration.cs" />
     <Compile Include="EntityConfig\ItemVendaConfiguration.cs" />
     <Compile Include="EntityConfig\LotCxaConfiguration.cs" />
     <Compile Include="EntityConfig\PrdBarConfiguration.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Repositories\CupomRepository.cs" />
     <Compile Include="Repositories\FunCabRepository.cs" />
     <Compile Include="Repositories\FuncionarioRepository.cs" />
+    <Compile Include="Repositories\InventarioRepository.cs" />
     <Compile Include="Repositories\ItemVendaRepository.cs" />
     <Compile Include="Repositories\PrdBarRepository.cs" />
     <Compile Include="Repositories\LotCxaRepository.cs" />

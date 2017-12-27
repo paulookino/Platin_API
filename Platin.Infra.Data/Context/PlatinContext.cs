@@ -30,6 +30,8 @@ namespace Platin.Infra.Data.Context
 
         public DbSet<Cupom> Cupom { get; set; }
 
+        public DbSet<Inventario> Inventario { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -44,6 +46,7 @@ namespace Platin.Infra.Data.Context
             modelBuilder.Configurations.Add(new EntityConfig.VendaConfiguration());
             modelBuilder.Configurations.Add(new EntityConfig.ItemVendaConfiguration());
             modelBuilder.Configurations.Add(new EntityConfig.CupomConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.InventarioConfiguration());
 
             //modelBuilder.Entity<CalculoSimulacao>().HasKey<decimal>(k => k.Valor);
             //modelBuilder.Entity<Cliente>().Ignore(d => d.EhCliente);

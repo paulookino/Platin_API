@@ -61,6 +61,7 @@
     <Compile Include="Interfaces\ICupomAppServiceBase.cs" />
     <Compile Include="Interfaces\IFunCabAppServiceBase.cs" />
     <Compile Include="Interfaces\IFuncionarioAppServiceBase.cs" />
+    <Compile Include="Interfaces\IInventarioAppServiceBase.cs" />
     <Compile Include="Interfaces\IItemVendaAppServiceBase.cs" />
     <Compile Include="Interfaces\ILotCxaAppServiceBase.cs" />
     <Compile Include="Interfaces\IPostgreSQLAppServiceBase.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Interfaces\IUsuSisAppServiceBase.cs" />
     <Compile Include="Interfaces\IVendaAppServiceBase.cs" />
     <Compile Include="Interfaces\IVFunUadCabAppServiceBase.cs" />
+    <Compile Include="InventarioAppServiceBase.cs" />
     <Compile Include="ItemVendaAppServiceBase.cs" />
     <Compile Include="LotCxaAppServiceBase.cs" />
     <Compile Include="PostgreSQLAppServiceBase.cs" />
