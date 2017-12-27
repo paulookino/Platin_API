@@ -42,31 +42,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppServiceBase.cs" />
+    <Compile Include="CaixaAppServiceBase.cs" />
+    <Compile Include="CategoriaAppServiceBase.cs" />
     <Compile Include="ClsCabAppServiceBase.cs" />
     <Compile Include="CpmCabAppServiceBase.cs" />
     <Compile Include="CpmFecAppServiceBase.cs" />
     <Compile Include="CpmIteAppServiceBase.cs" />
+    <Compile Include="CupomAppServiceBase.cs" />
     <Compile Include="FunCabAppServiceBase.cs" />
+    <Compile Include="FuncionarioAppServiceBase.cs" />
+    <Compile Include="Interfaces\ICaixaAppServiceBase.cs" />
+    <Compile Include="Interfaces\ICategoriaAppServiceBase.cs" />
     <Compile Include="Interfaces\ICpmCabAppServiceBase.cs" />
     <Compile Include="Interfaces\IAppServiceBase.cs" />
     <Compile Include="Interfaces\IClsCabAppServiceBase.cs" />
     <Compile Include="Interfaces\ICpmFecAppServiceBase.cs" />
     <Compile Include="Interfaces\ICpmIteAppServiceBase.cs" />
+    <Compile Include="Interfaces\ICupomAppServiceBase.cs" />
     <Compile Include="Interfaces\IFunCabAppServiceBase.cs" />
+    <Compile Include="Interfaces\IFuncionarioAppServiceBase.cs" />
+    <Compile Include="Interfaces\IItemVendaAppServiceBase.cs" />
     <Compile Include="Interfaces\ILotCxaAppServiceBase.cs" />
     <Compile Include="Interfaces\IPostgreSQLAppServiceBase.cs" />
     <Compile Include="Interfaces\IPrdBarAppServiceBase.cs" />
     <Compile Include="Interfaces\IPrdCabAppServiceBase.cs" />
     <Compile Include="Interfaces\IProductAppServiceBase.cs" />
+    <Compile Include="Interfaces\IProdutoAppServiceBase.cs" />
     <Compile Include="Interfaces\IUsuSisAppServiceBase.cs" />
+    <Compile Include="Interfaces\IVendaAppServiceBase.cs" />
     <Compile Include="Interfaces\IVFunUadCabAppServiceBase.cs" />
+    <Compile Include="ItemVendaAppServiceBase.cs" />
     <Compile Include="LotCxaAppServiceBase.cs" />
     <Compile Include="PostgreSQLAppServiceBase.cs" />
     <Compile Include="PrdBarAppServiceBase.cs" />
     <Compile Include="PrdCabAppServiceBase.cs" />
     <Compile Include="ProductAppServiceBase.cs" />
+    <Compile Include="ProdutoAppServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuSisAppServiceBase.cs" />
+    <Compile Include="VendaAppServiceBase.cs" />
     <Compile Include="VFunUadCabAppServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>

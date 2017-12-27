@@ -16,6 +16,20 @@ namespace Platin.Infra.Data.Context
 
         public DbSet<Product> Product { get; set; }
 
+        public DbSet<Funcionario> Funcionario { get; set; }
+
+        public DbSet<Caixa> Caixa { get; set; }
+
+        public DbSet<Categoria> Categoria { get; set; }
+
+        public DbSet<Produto> Produto { get; set; }
+
+        public DbSet<Venda> Venda { get; set; }
+
+        public DbSet<ItemVenda> ItemVenda { get; set; }
+
+        public DbSet<Cupom> Cupom { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -23,6 +37,13 @@ namespace Platin.Infra.Data.Context
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             modelBuilder.Configurations.Add(new EntityConfig.ProductConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.FuncionarioConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CaixaConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CategoriaConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.ProdutoConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.VendaConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.ItemVendaConfiguration());
+            modelBuilder.Configurations.Add(new EntityConfig.CupomConfiguration());
 
             //modelBuilder.Entity<CalculoSimulacao>().HasKey<decimal>(k => k.Valor);
             //modelBuilder.Entity<Cliente>().Ignore(d => d.EhCliente);

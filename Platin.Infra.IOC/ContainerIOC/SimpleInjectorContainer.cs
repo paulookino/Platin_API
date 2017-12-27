@@ -25,12 +25,32 @@ namespace Platin.Infra.IOC.ContainerIOC
             //SQL Server
             _container.Register(typeof(IAppServiceBase<>), typeof(AppServiceBase<>));
             _container.Register<IProductAppServiceBase, ProductAppServiceBase>();
+            _container.Register<IFuncionarioAppServiceBase, FuncionarioAppServiceBase>();
+            _container.Register<ICaixaAppServiceBase, CaixaAppServiceBase>();
+            _container.Register<ICategoriaAppServiceBase, CategoriaAppServiceBase>();
+            _container.Register<IProdutoAppServiceBase, ProdutoAppServiceBase>();
+            _container.Register<IVendaAppServiceBase, VendaAppServiceBase>();
+            _container.Register<IItemVendaAppServiceBase, ItemVendaAppServiceBase>();
+            _container.Register<ICupomAppServiceBase, CupomAppServiceBase>();
 
             _container.Register(typeof(IServiceBase<>), typeof(ServiceBase<>));
             _container.Register<IProductService, ProductService>();
-           
+            _container.Register<IFuncionarioService, FuncionarioService>();
+            _container.Register<ICaixaService, CaixaService>();
+            _container.Register<ICategoriaService, CategoriaService>();
+            _container.Register<IProdutoService, ProdutoService>();
+            _container.Register<IVendaService, VendaService>();
+            _container.Register<ICupomService, CupomService>();
+
             _container.Register(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             _container.Register<IProductRepository, ProductRepository>();
+            _container.Register<IFuncionarioRepository, FuncionarioRepository>();
+            _container.Register<ICaixaRepository, CaixaRepository>();
+            _container.Register<ICategoriaRepository, CategoriaRepository>();
+            _container.Register<IProdutoRepository, ProdutoRepository>();
+            _container.Register<IVendaRepository, VendaRepository>();
+            _container.Register<IItemVendaRepository, ItemVendaRepository>();
+            _container.Register<ICupomRepository, CupomRepository>();
 
             //PostgreSQL
             _container.Register(typeof(IPostgreSQLAppServiceBase<>), typeof(PostgreSQLAppServiceBase<>));

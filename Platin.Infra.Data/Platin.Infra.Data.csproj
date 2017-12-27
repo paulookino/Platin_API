@@ -60,30 +60,44 @@
   <ItemGroup>
     <Compile Include="Context\PlatinContext.cs" />
     <Compile Include="Context\PostgreSQLContext.cs" />
+    <Compile Include="EntityConfig\CaixaConfiguration.cs" />
+    <Compile Include="EntityConfig\CategoriaConfiguration.cs" />
     <Compile Include="EntityConfig\ClsCabConfiguration.cs" />
     <Compile Include="EntityConfig\CpmCabConfiguration.cs" />
     <Compile Include="EntityConfig\CpmFecConfiguration.cs" />
     <Compile Include="EntityConfig\CpmIteConfiguration.cs" />
+    <Compile Include="EntityConfig\CupomConfiguration.cs" />
     <Compile Include="EntityConfig\FunCabConfiguration.cs" />
+    <Compile Include="EntityConfig\FuncionarioConfiguration.cs" />
+    <Compile Include="EntityConfig\ItemVendaConfiguration.cs" />
     <Compile Include="EntityConfig\LotCxaConfiguration.cs" />
     <Compile Include="EntityConfig\PrdBarConfiguration.cs" />
     <Compile Include="EntityConfig\PrdCabConfiguration.cs" />
     <Compile Include="EntityConfig\ProductConfiguration.cs" />
+    <Compile Include="EntityConfig\ProdutoConfiguration.cs" />
     <Compile Include="EntityConfig\UsuSisConfiguration.cs" />
+    <Compile Include="EntityConfig\VendaConfiguration.cs" />
     <Compile Include="EntityConfig\VFunUadCabConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CaixaRepository.cs" />
+    <Compile Include="Repositories\CategoriaRepository.cs" />
     <Compile Include="Repositories\ClsCabRepository.cs" />
     <Compile Include="Repositories\CpmCabRepository.cs" />
     <Compile Include="Repositories\CpmFecRepository.cs" />
     <Compile Include="Repositories\CpmIteRepository.cs" />
+    <Compile Include="Repositories\CupomRepository.cs" />
     <Compile Include="Repositories\FunCabRepository.cs" />
+    <Compile Include="Repositories\FuncionarioRepository.cs" />
+    <Compile Include="Repositories\ItemVendaRepository.cs" />
     <Compile Include="Repositories\PrdBarRepository.cs" />
     <Compile Include="Repositories\LotCxaRepository.cs" />
     <Compile Include="Repositories\PostgreSQLRepositoryBase.cs" />
     <Compile Include="Repositories\PrdCabRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProdutoRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\UsuSisRepository.cs" />
+    <Compile Include="Repositories\VendaRepository.cs" />
     <Compile Include="Repositories\VFunUadCabRepository.cs" />
   </ItemGroup>
   <ItemGroup>
