@@ -12,7 +12,7 @@ namespace Platin.Domain.Entities
 
         public DateTime VenData { get; set; }
 
-        public DateTime VenHora { get; set; }
+        public TimeSpan VenHora { get; set; }
 
         public decimal VenTotal { get; set; }
 

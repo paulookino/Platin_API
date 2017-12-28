@@ -31,7 +31,7 @@ namespace Platin.Infra.Data.EntityConfig
             Property(f => f.FunEmail).HasColumnName("fun_email").HasColumnType("varchar").HasMaxLength(100);
             Property(f => f.FunStatus).HasColumnName("fun_status").HasColumnType("int");
             Property(f => f.CinId).HasColumnName("cin_id").HasColumnType("int");
-            Property(f => f.FunDtNascimento).HasColumnName("fun_dtnascimento").HasColumnType("datime");
+            Property(f => f.FunDtNascimento).HasColumnName("fun_dtnascimento").HasColumnType("datetime");
             Property(f => f.FunDDD1).HasColumnName("fun_dd1").HasColumnType("varchar").HasMaxLength(2);
             Property(f => f.FunDDD2).HasColumnName("fun_dd2").HasColumnType("varchar").HasMaxLength(2);
             Property(f => f.FunDDD3).HasColumnName("fun_dd3").HasColumnType("varchar").HasMaxLength(2);

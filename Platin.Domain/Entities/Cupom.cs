@@ -16,7 +16,7 @@ namespace Platin.Domain.Entities
 
         public DateTime CupData { get; set; }
 
-        public DateTime CupHora { get; set; }
+        public TimeSpan CupHora { get; set; }
 
         public decimal CupTotal { get; set; }
     }

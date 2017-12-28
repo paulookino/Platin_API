@@ -16,7 +16,7 @@ namespace Platin.Domain.Entities
 
         public string IteInformacao { get; set; }
 
-        public DateTime IteHora { get; set; }
+        public TimeSpan IteHora { get; set; }
 
         public DateTime IteData { get; set; }
     }

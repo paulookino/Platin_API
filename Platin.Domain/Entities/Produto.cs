@@ -1,4 +1,6 @@
-﻿namespace Platin.Domain.Entities
+﻿using System;
+
+namespace Platin.Domain.Entities
 {
     public class Produto
     {
@@ -22,7 +24,7 @@
 
         public int ProStatus { get; set; }
 
-        public byte ProImagem { get; set; }
+        public Byte[] ProImagem { get; set; }
 
         public string ProNcm { get; set; }
 

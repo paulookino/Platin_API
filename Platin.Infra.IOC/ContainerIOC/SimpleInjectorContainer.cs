@@ -41,6 +41,7 @@ namespace Platin.Infra.IOC.ContainerIOC
             _container.Register<ICategoriaService, CategoriaService>();
             _container.Register<IProdutoService, ProdutoService>();
             _container.Register<IVendaService, VendaService>();
+            _container.Register<IItemVendaService, ItemVendaService>();
             _container.Register<ICupomService, CupomService>();
             _container.Register<IInventarioService, InventarioService>();
 
