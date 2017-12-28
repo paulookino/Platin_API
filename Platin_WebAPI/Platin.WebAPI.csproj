@@ -120,8 +120,10 @@
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="Controllers\CaixaController.cs" />
     <Compile Include="Controllers\CategoriaControllercs.cs" />
+    <Compile Include="Controllers\CupomController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
+    <Compile Include="Controllers\ItemVendaController.cs" />
     <Compile Include="Controllers\PDVController.cs" />
     <Compile Include="Controllers\PrdCabController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
