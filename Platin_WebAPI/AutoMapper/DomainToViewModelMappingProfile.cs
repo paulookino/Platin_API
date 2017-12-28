@@ -14,6 +14,15 @@ namespace Platin_WebAPI.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<ProductViewModel, Product>();
+            Mapper.CreateMap<CaixaViewModel, Caixa>();
+            Mapper.CreateMap<CategoriaViewModel, Categoria>();
+            Mapper.CreateMap<CupomViewModel, Cupom>();
+            Mapper.CreateMap<FuncionarioViewModel, Funcionario>();
+            Mapper.CreateMap<InventarioViewModel, Inventario>();
+            Mapper.CreateMap<ItemVendaViewModel, ItemVenda>();
+            Mapper.CreateMap<PrdCabViewModel, PrdCab>();
+            Mapper.CreateMap<ProdutoViewModel, Produto>();
+            Mapper.CreateMap<VendaViewModel, Venda>();
 
         }
     }
