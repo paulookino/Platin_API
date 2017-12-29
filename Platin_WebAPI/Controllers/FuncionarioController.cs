@@ -76,7 +76,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]FuncionarioViewModel funcionarioViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -84,7 +84,7 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var funcionarioDomain = Mapper.Map<FuncionarioViewModel, Funcionario>(funcionarioViewModel);
+                    var funcionarioDomain = _funcionarioAppServiceBase.GetById(id);
 
                     _funcionarioAppServiceBase.Remove(funcionarioDomain);
                     retorno = "Funcionário " + funcionarioDomain.FunNome + "excluído com sucesso.";

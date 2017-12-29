@@ -152,6 +152,7 @@
     <Compile Include="ViewModels\ItemVendaViewModel.cs" />
     <Compile Include="ViewModels\CupomViewModel.cs" />
     <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

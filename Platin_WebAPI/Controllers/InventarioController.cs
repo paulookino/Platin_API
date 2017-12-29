@@ -76,7 +76,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]InventarioViewModel inventarioViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -84,7 +84,9 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var inventarioDomain = Mapper.Map<InventarioViewModel, Inventario>(inventarioViewModel);
+
+
+                    var inventarioDomain = _inventarioAppServiceBase.GetById(id);
 
                     _inventarioAppServiceBase.Remove(inventarioDomain);
                     retorno = "Código de Barras " + inventarioDomain.InvCodigo + "excluído com sucesso.";

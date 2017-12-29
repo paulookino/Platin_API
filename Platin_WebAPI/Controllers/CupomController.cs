@@ -76,7 +76,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]CupomViewModel cupomViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -84,7 +84,7 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var cupomDomain = Mapper.Map<CupomViewModel, Cupom>(cupomViewModel);
+                    var cupomDomain = _cupomAppServiceBase.GetById(id);
 
                     _cupomAppServiceBase.Remove(cupomDomain);
                     retorno = "Cupom " + cupomDomain.CupCodigo + "excluído com sucesso.";

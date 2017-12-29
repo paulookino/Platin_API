@@ -76,7 +76,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]CaixaViewModel caixaViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -84,7 +84,7 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var caixaDomain = Mapper.Map<CaixaViewModel, Caixa>(caixaViewModel);
+                    var caixaDomain = _caixaAppServiceBase.GetById(id);
 
                     _caixaAppServiceBase.Remove(caixaDomain);
                     retorno = "Caixa " + caixaDomain.CaiNumero + "excluído com sucesso.";

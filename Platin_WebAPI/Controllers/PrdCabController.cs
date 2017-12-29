@@ -81,7 +81,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]PrdCabViewModel prdCabViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -89,7 +89,7 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var prdCabDomain = Mapper.Map<PrdCabViewModel, PrdCab>(prdCabViewModel);
+                    var prdCabDomain = _prdCabAppServiceBase.GetById(id);
 
                     _prdCabAppServiceBase.Remove(prdCabDomain);
                     retorno = "Produto " + prdCabDomain.Des + "excluído com sucesso.";

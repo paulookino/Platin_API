@@ -76,7 +76,7 @@ namespace Platin_WebAPI.Controllers
         }
 
         [HttpDelete()]
-        public HttpResponseMessage Excluir([FromBody]VendaViewModel vendaViewModel)
+        public HttpResponseMessage Excluir(int id)
         {
             var formatter = new JsonMediaTypeFormatter();
             string retorno = null;
@@ -84,7 +84,7 @@ namespace Platin_WebAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var vendaDomain = Mapper.Map<VendaViewModel, Venda>(vendaViewModel);
+                    var vendaDomain = _vendaAppServiceBase.GetById(id);
 
                     _vendaAppServiceBase.Remove(vendaDomain);
                     retorno = "Venda " + vendaDomain.VenId + "excluído com sucesso.";
