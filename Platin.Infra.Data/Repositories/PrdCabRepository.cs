@@ -18,6 +18,8 @@ namespace Platin.Infra.Data.Repositories
                               ProNome = prdCab.Des,
                               ProDescricao = prdCab.Des,
                               ProValor = cpmIte.Vlr,
+                              CustoMedio = prdCab.Cum.Value,
+                              UltimoCusto = prdCab.Ucu.Value,
                               ProCodigo = prdBar.Bar
                           }).Take(100).ToList();
 

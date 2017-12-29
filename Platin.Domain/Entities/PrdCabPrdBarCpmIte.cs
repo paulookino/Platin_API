@@ -10,6 +10,10 @@
 
         public double ProValor { get; set; }
 
+        public double CustoMedio { get; set; }
+
+        public double UltimoCusto { get; set; }
+
         public string ProCodigo { get; set; }
     }
 }
