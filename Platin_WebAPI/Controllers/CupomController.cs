@@ -75,7 +75,7 @@ namespace Platin_WebAPI.Controllers
             return Request.CreateResponse(System.Net.HttpStatusCode.OK, retorno, formatter);
         }
 
-        [HttpPost()]
+        [HttpDelete()]
         public HttpResponseMessage Excluir([FromBody]CupomViewModel cupomViewModel)
         {
             var formatter = new JsonMediaTypeFormatter();

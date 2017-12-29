@@ -37,6 +37,9 @@ namespace Platin.Infra.Data.Repositories
 
         public void Remove(TEntity obj)
         {
+
+
+            db.Set<TEntity>().Attach(obj);
             db.Set<TEntity>().Remove(obj);
             db.SaveChanges();
         }
