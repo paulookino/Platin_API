@@ -82,15 +82,12 @@ namespace Platin_WebAPI.Controllers
             string retorno = null;
             try
             {
-                if (ModelState.IsValid)
-                {
 
 
-                    var inventarioDomain = _inventarioAppServiceBase.GetById(id);
-
+                var inventarioDomain = _inventarioAppServiceBase.GetById(id);
                     _inventarioAppServiceBase.Remove(inventarioDomain);
                     retorno = "Código de Barras " + inventarioDomain.InvCodigo + "excluído com sucesso.";
-                }
+                
                 var jsonSerialize = new JsonSerialize();
                 jsonSerialize.SerializarJson(formatter);
 
@@ -192,6 +189,19 @@ namespace Platin_WebAPI.Controllers
         public IEnumerable<Inventario> RetornaTodosCodigos()
         {
             return _inventarioAppServiceBase.GetAll();
+        }
+
+
+        [HttpGet]
+        public IEnumerable<InventarioViewModel> RetornaTodosCodigosComContagem()
+        {
+            var list = _inventarioAppServiceBase.GetAll();
+            
+            var query = list.Select(c => c.InvCodigo)
+                .GroupBy(s => s)
+                .Select(g => new  InventarioViewModel { InvCodigo = g.Key, ContagemCodigo = g.Count() });
+
+            return query;
         }
     }
 }
