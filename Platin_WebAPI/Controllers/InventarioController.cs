@@ -17,9 +17,13 @@ namespace Platin_WebAPI.Controllers
     {
         private readonly IInventarioAppServiceBase _inventarioAppServiceBase;
 
-        public InventarioController(IInventarioAppServiceBase inventarioAppServiceBase)
+        private readonly IProdutoAppServiceBase _produtoAppServiceBase;
+
+        public InventarioController(IInventarioAppServiceBase inventarioAppServiceBase,
+            IProdutoAppServiceBase produtoAppServiceBase)
         {
             _inventarioAppServiceBase = inventarioAppServiceBase;
+            _produtoAppServiceBase = produtoAppServiceBase;
         }
 
         [HttpPost()]
@@ -191,6 +195,43 @@ namespace Platin_WebAPI.Controllers
             return _inventarioAppServiceBase.GetAll();
         }
 
+
+
+        [HttpGet]
+        public IEnumerable<InventarioProduto> RetornaInventarioProduto()
+        {
+            var inventarioProduto = new List<InventarioProduto>();
+
+            try
+            {
+                var inventario = _inventarioAppServiceBase.GetAll();
+
+
+                foreach (var ip in inventario)
+                {
+                    var inventarioProdutoApp = _produtoAppServiceBase.GetByFilter(c => c.ProCodigo == ip.InvCodigo);
+
+
+                    inventarioProduto.Add(new InventarioProduto
+                    {
+                        InvId = ip.InvId,
+                        InvCodigo = ip.InvCodigo,
+                        ProNome = inventarioProdutoApp.Count() != 0 ? inventarioProdutoApp.LastOrDefault().ProNome : "Sem nome"
+
+                    });
+
+                }
+            }
+
+            catch (Exception e)
+            {
+
+            }
+
+
+
+            return inventarioProduto;
+        }
 
         [HttpGet]
         public IEnumerable<InventarioViewModel> RetornaTodosCodigosComContagem()

@@ -25,7 +25,7 @@ namespace Platin.Infra.Data.EntityConfig
             Property(p => p.ProNcm).HasColumnName("pro_ncm").HasColumnType("varchar").HasMaxLength(10);
             Property(p => p.MarId).HasColumnName("mar_id").HasColumnType("int");
             Property(p => p.ProAliquota).HasColumnName("pro_aliquota").HasColumnType("varchar").HasMaxLength(30);
-            Property(p => p.ProCfop).HasColumnName("pro_fop").HasColumnType("varchar").HasMaxLength(10);
+            Property(p => p.ProCfop).HasColumnName("pro_cfop").HasColumnType("varchar").HasMaxLength(10);
             Property(p => p.ProPorcentagemTributo).HasColumnName("pro_porcentagemtributo").HasColumnType("decimal");
             Property(p => p.ProOrigem).HasColumnName("pro_origem").HasColumnType("int");
             Property(p => p.ProCsosn).HasColumnName("pro_csosn").HasColumnType("varchar").HasMaxLength(10);
