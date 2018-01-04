@@ -56,6 +56,7 @@
     <Compile Include="Entities\FunCab.cs" />
     <Compile Include="Entities\Funcionario.cs" />
     <Compile Include="Entities\Inventario.cs" />
+    <Compile Include="Entities\InventarioProduto.cs" />
     <Compile Include="Entities\ItemVenda.cs" />
     <Compile Include="Entities\LotCxa.cs" />
     <Compile Include="Entities\LotCxaVFunUadCab.cs" />

@@ -1,4 +1,5 @@
-﻿using Platin.Domain.Entities;
+﻿using System.Collections.Generic;
+using Platin.Domain.Entities;
 using Platin.Domain.Interfaces.Repositories;
 using Platin.Domain.Interfaces.Services;
 
@@ -12,6 +13,11 @@ namespace Platin.Domain.Services
             :base(inventarioRepository)
         {
             _inventarioRepository = inventarioRepository;
+        }
+
+        public List<InventarioProduto> ConsultaInventarioProduto()
+        {
+            return _inventarioRepository.ConsultaInventarioProduto();
         }
     }
 }
