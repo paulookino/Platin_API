@@ -244,5 +244,33 @@ namespace Platin_WebAPI.Controllers
 
             return query;
         }
+
+        [HttpGet]
+        public IEnumerable<InventarioProduto> RetornaInventarioProdutoContagem()
+        {
+            var inventarioProdutoLista = new List<InventarioProduto>();
+
+            var list = _inventarioAppServiceBase.GetAll();
+
+            var query = list.Select(c => c.InvCodigo)
+                .GroupBy(s => s)
+                .Select(g => new InventarioProduto { InvCodigo = g.Key, ContagemCodigo = g.Count() });
+
+            foreach (var inventarioContagem in query)
+            {
+               var produtoInventario = _produtoAppServiceBase.GetByFilter(p => p.ProCodigo == inventarioContagem.InvCodigo);
+
+
+
+                inventarioProdutoLista.Add(new InventarioProduto
+                {
+                    InvCodigo = inventarioContagem.InvCodigo,
+                    ProNome = produtoInventario.Count() != 0 ? produtoInventario.LastOrDefault().ProNome : "Sem nome",
+                    ContagemCodigo = inventarioContagem.ContagemCodigo
+
+                });
+            }
+            return inventarioProdutoLista;
+        }
     }
 }

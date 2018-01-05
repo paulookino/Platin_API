@@ -4,6 +4,7 @@ namespace Platin.Domain.Entities
 {
     public class InventarioProduto
     {
+        public int? ContagemCodigo { get; set; }
 
         public int InvId { get; set; }
 
